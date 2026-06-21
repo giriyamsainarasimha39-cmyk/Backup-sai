@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RK Skills and Solutions</title>
+    <link rel="stylesheet" href="tyle.css">
+    <!-- PocketBase SDK Core -->
+    <script src="https://cloudflare.com"></script>
+    <!-- Tailwind Utility Classes for Authentication Modal -->
+    <script src="https://tailwindcss.com"></script>
+    <!-- Main Application Logic Script File -->
+    <script src="script.js" defer></script>
+</head>
+<body class="bg-slate-50 text-gray-900">
+
+    <!-- Sticky Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo-container">
+            <div class="logo-container-inner">
+                <img src="logo.png" alt="RK Skills Logo">
+                <h1>RK SKILLS AND SOLUTIONS</h1>
+            </div>
+            <p>Industry-Aligned CRT & Technical Skills Training</p>
+        </div>
+
+        <!-- Mobile Hamburger Menu Button -->
+        <div class="menu-toggle" id="menu-toggle">☰</div>
+
+        <!-- Navigation Target Links -->
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#features">Features</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#team">Team</a></li>
+            <li><a href="#" class="btn-nav">Dashboard</a></li>
+        </ul>
+    </nav>
+
+    <!-- Placement Training Feature Showcase Hero -->
+    <section class="her" id="features">
+        <div class="herr">
+            <div class="top-badge">
+                Daily Practice • Results • Leaderboard
+            </div>
+
+            <h1>
+                Develop placement confidence with 
+                <span>advanced CRT and technical skills</span>
+            </h1>
+
+            <p>
+                An integrated learning platform that enables daily practice, mock assessments,
+                real-time results, and continuous improvement—built for seamless adoption
+                across college batches.
+            </p>
+
+            <div class="buttons">
+                <a href="#" class="btn primary">Get Started →</a>
+                <a href="#" class="btn light">Talk to Counselor</a>
+            </div>
+
+            <div class="tags">
+                <span>✔ Aptitude</span>
+                <span>✔ Reasoning</span>
+                <span>✔ Verbal</span>
+                <span>✔ Communication</span>
+                <span>✔ Coding drills</span>
+                <span>✔ Company patterns</span>
+            </div>
+        </div>
+
+        <!-- Clean, Responsive Banner Graphic Wrapper -->
+        <div class="side-image">
+            <img src="studis.jpg" alt="Students studying">
+        </div>
+    </section>
+
+    <!-- Unified Toolkit Sub-Hero Branding Block -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Comprehensive Toolkit for Placement Excellence</h1>
+            <p>An integrated, structured learning ecosystem combining strategic daily planning, focused practice, comprehensive assessments, performance analytics, progress tracking, and continuous motivation in one platform.</p>
+            <div class="buttons">
+                <button class="primary" style="background-color: #0a66c2; color: white;">Get Started</button>
+                <button class="secondary">Learn More</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Academic Services Catalog Grid Section -->
+    <section class="services" id="services">
+        <h2>Our Services</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>Web Development</h3>
+                <p>Modern website design and development solutions tailored for business transformation and scaling.</p>
+            </div>
+            <div class="card">
+                <h3>Exam Preparation</h3>
+                <p>High-quality practice tests, analytical metrics boards, and custom mock exams optimized for success.</p>
+            </div>
+            <div class="card">
+                <h3>Consulting</h3>
+                <p>Strategic professional guidance geared heavily toward maximizing corporate career paths and placement metrics.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dynamic Authentication Modal Interface Overlay -->
+<div id="authModal" class="modal-overlay hidden">
+    <div class="modal-card">
+        <!-- Dismiss Link Button -->
+        <button id="closeAuth" class="modal-close-btn">✕</button>
+        
+        <h2 id="modalTitle">Student Login</h2>
+        
+        <form id="authForm">
+            <!-- Registration & Credentials Login Tracking Elements -->
+            <div class="form-group">
+                <label for="authEmail">College Email Address</label>
+                <input type="email" id="authEmail" required placeholder="name@college.edu">
+            </div>
+            
+            <div class="form-group">
+                <label for="authPassword">Secure Password</label>
+                <input type="password" id="authPassword" required placeholder="••••••••">
+            </div>
+
+            <button type="submit" id="submitAuthBtn" class="modal-submit-btn">
+                Sign In to Portal
+            </button>
+        </form>
+
+        <!-- Authentication View Matrix State Alternator -->
+        <p class="modal-footer-text">
+            <span id="togglePrompt">New to RK Skills?</span> 
+            <button id="toggleAuthMode">Create account</button>
+        </p>
+    </div>
+</div>
+
+
+    <!-- Inline Mobile Layout Menu Nav Animation Bridge Router Code -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const toggle = document.getElementById("menu-toggle");
+            const navLinks = document.getElementById("nav-links");
+
+            if (toggle && navLinks) {
+                toggle.addEventListener("click", () => {
+                    navLinks.classList.toggle("active");
+                });
+
+                // Auto-collapse mobile slide-out menu drawer when navigating layout anchor tags
+                navLinks.querySelectorAll("li a").forEach(link => {
+                    link.addEventListener("click", () => {
+                        if (!link.classList.contains("btn-nav")) {
+                            navLinks.classList.remove("active");
+                        }
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+</html>
