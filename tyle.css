@@ -1,0 +1,332 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+body {
+font-family: 'Segoe UI', sans-serif;
+}
+
+/* Navbar */
+.navbar {
+position: sticky;
+top: 0;
+z-index: 1000;
+display: flex;
+justify-content: space-between;
+align-items: center;
+
+padding: 15px 60px;
+background: rgba(255, 255, 255, 0.95);
+backdrop-filter: blur(10px);
+
+box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-container img {
+    height: 50px;
+    width: 70px;
+    object-fit: contain;
+    border-radius: 70%; /* makes it look premium (round) */
+}
+
+.logo-container span {
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+}
+/* Logo */
+.logo-container h1 {
+font-size: 20px;
+font-weight: 700;
+color: #111827;
+letter-spacing: 0.5px;
+}
+
+.logo-container p {
+font-size: 12px;
+color: #6b7280;
+margin-top: 2px;
+}
+
+.logo-container {
+display: flex;
+flex-direction: column;
+}
+
+
+
+
+
+/* Nav Links */
+.nav-links {
+list-style: none;
+display: flex;
+align-items: center;
+gap: 30px;
+}
+
+.nav-links li a {
+text-decoration: none;
+color: #374151;
+font-size: 15px;
+font-weight: 500;
+transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.nav-links li a:hover {
+color: #0a66c2;
+}
+
+/* Button style (Dashboard) */
+.btn-nav {
+background: #0a66c2;
+color: white !important;
+padding: 8px 16px;
+border-radius: 6px;
+transition: 0.3s;
+}
+
+.btn-nav:hover {
+background: #004182;
+}
+
+/* Smooth hover underline effect 
+.nav-links li a::after {
+content: "";
+display: inline-block;
+height: 2px;
+width: 0%;
+background: #0a66c2;
+transition: 0.3s;
+margin-top: 3px;
+}
+
+.nav-links li a:hover::after {
+width: 100%;
+}*/
+
+
+
+
+
+
+
+/* Hero Section */
+.her {
+height: 80vh;
+width: 80%;
+margin: 0 auto;
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+background: white;
+color: white;
+text-align: center;
+padding: 20px;
+}
+
+
+
+.herr {
+height: 80vh;
+width: 50%;
+
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+background: white;
+color: white;
+text-align: center;
+padding: 20px;
+}
+/* Top Badge */
+.top-badge {
+  display: inline-block;
+  background: #e6ebff;
+  color: #4a5bdc;
+  padding: 10px 18px;
+  border-radius: 25px;
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+
+
+
+
+
+/* Heading */
+.her h1 {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #c2410c;
+}
+
+
+    
+}
+.her h1 span {
+  background: linear-gradient(90deg, #ff6a00, #7c3aed);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Paragraph */
+.her p {
+  margin-top: 20px;
+  font-size: 16px;
+  color: #475569;
+  line-height: 1.6;
+}
+
+/* Buttons */
+.buttons {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 14px 22px;
+  border-radius: 10px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+/* Primary Button */
+.btn.primary {
+  background: #dc2626;
+  color: white;
+}
+
+.btn.primary:hover {
+  background: #b91c1c;
+}
+
+/* Outline Button */
+.btn.outline {
+  border: 2px solid #3b82f6;
+  color: #3b82f6;
+  background: transparent;
+}
+
+.btn.outline:hover {
+  background: #3b82f6;
+  color: white;
+}
+
+/* Light Button */
+.btn.light {
+  background: #e5e7eb;
+  color: #111827;
+}
+
+.btn.light:hover {
+  background: #d1d5db;
+}
+
+/* Tags */
+.tags {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.tags span {
+  background: #e6f4ea;
+  color: #15803d;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+.side-image {
+    flex: 0.8;          /* Prevents the image from overpowering the text */
+    display: flex;
+    justify-content: center;
+}
+
+.side-image img {
+    max-width: 100%;
+    height: 40;
+    border-radius: 8px; /
+}
+
+/* Responsive adjustment for mobile screens */
+/* @media (max-width: 768px) {
+    .her {
+        flex-direction: column;  Stacks image below text on mobile screens 
+        text-align: center;
+    }
+    .text-content .button-group, 
+    .text-content .tags-group {
+        justify-content: center; Re-centers buttons on mobile screens 
+    }
+}*/
+
+
+
+
+
+
+/* Hamburger (hidden on desktop) */
+.menu-toggle {
+display: none;
+font-size: 28px;
+cursor: pointer;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+
+
+.navbar {
+    padding: 15px 20px;
+}
+
+.menu-toggle {
+    display: block;
+}
+
+.nav-links {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: white;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+
+    display: none;
+}
+
+.nav-links.active {
+    display: flex;
+}
+
+.logo-container h1 {
+    font-size: 16px;
+}
+
+.logo-container p {
+    font-size: 10px;
+}
+
+}
